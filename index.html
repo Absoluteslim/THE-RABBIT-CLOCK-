@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Rabbit's Clock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="clock-app" aria-label="The Rabbit's Clock dashboard">
+      <header class="hero">
+        <p class="label">minimal music clock</p>
+        <h1>THE RABBIT'S CLOCK</h1>
+        <p class="sub">Focus-friendly time, date, and rhythm in one clean view.</p>
+      </header>
+
+      <section class="deck" aria-label="Turntable inspired layout">
+        <div class="vinyl-wrap" aria-hidden="true">
+          <div class="vinyl">
+            <div class="vinyl-ring ring-1"></div>
+            <div class="vinyl-ring ring-2"></div>
+            <div class="vinyl-ring ring-3"></div>
+            <div class="vinyl-label"></div>
+            <div class="tone-arm"></div>
+          </div>
+        </div>
+
+        <div class="time-panel">
+          <div class="meta-row">
+            <span id="greeting">Good day</span>
+            <span id="weekday">MON</span>
+          </div>
+
+          <div class="flip-clock" aria-live="polite">
+            <div class="card"><span id="hours">12</span></div>
+            <div class="separator">:</div>
+            <div class="card"><span id="minutes">00</span></div>
+          </div>
+
+          <div class="ampm" id="ampm">AM</div>
+
+          <div class="date-strip">
+            <span id="month">JAN</span>
+            <span class="dot">•</span>
+            <span id="day">01</span>
+            <span class="dot">•</span>
+            <span id="year">2026</span>
+          </div>
+
+          <div class="progress-row" aria-label="Day progress">
+            <span>day flow</span>
+            <div class="progress-track"><div id="progress-bar"></div></div>
+            <span id="progress-label">0%</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
