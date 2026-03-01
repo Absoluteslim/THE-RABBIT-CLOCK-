@@ -69,7 +69,6 @@ body {
   background: conic-gradient(from 180deg, #0c0d11, #191c24 35%, #0f1118 70%, #090a0f);
   position: relative;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.55), inset 0 0 0 2px rgba(255, 255, 255, 0.05);
-  animation: spin 8s linear infinite;
 }
 
 .vinyl-ring {
@@ -236,3 +235,7 @@ body {
     padding-top: 0.8rem;
   }
 }
+.vinyl.playing {
+  animation: spin 8s linear infinite;
+}
+
