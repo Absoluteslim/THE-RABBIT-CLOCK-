@@ -45,3 +45,39 @@ function updateClock() {
 
 updateClock();
 setInterval(updateClock, 1000);
+const tick = document.getElementById("tickSound");
+const track = document.getElementById("vinylTrack");
+const vinyl = document.querySelector(".vinyl");
+const toneArm = document.querySelector(".tone-arm");
+
+let isMusicPlaying = false;
+
+window.addEventListener("load", () => {
+  tick.volume = 0.3;
+  tick.play().catch(() => {
+    console.log("Autoplay blocked until interaction");
+  });
+});
+
+function toggleAudio() {
+  if (!isMusicPlaying) {
+    tick.pause();
+    tick.currentTime = 0;
+
+    track.play();
+    vinyl.classList.add("playing");
+
+    isMusicPlaying = true;
+  } else {
+    track.pause();
+    track.currentTime = 0;
+
+    tick.play();
+    vinyl.classList.remove("playing");
+
+    isMusicPlaying = false;
+  }
+}
+
+vinyl.addEventListener("click", toggleAudio);
+toneArm.addEventListener("click", toggleAudio);
